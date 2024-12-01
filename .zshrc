@@ -139,3 +139,6 @@ alias lsl="ls -alh"
 alias ls="lsd"
 alias vi="nvim"
 alias vim="nvim"
+
+# Color issue of neovim in tmux
+export TERM="xterm-256color"
