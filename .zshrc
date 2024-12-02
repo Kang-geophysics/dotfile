@@ -139,7 +139,7 @@ alias lsl="ls -alh"
 alias ls="lsd"
 alias vi="nvim"
 alias vim="nvim"
-alias fzfvi="nvim $(fzf --multi --preview='bat --color=always {}')"
+alias fzfvi='nvim $(fzf --multi --preview="bat --color=always {}")'
 
 # Color issue of neovim in tmux
 export TERM="xterm-256color"
