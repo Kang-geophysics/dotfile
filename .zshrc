@@ -134,16 +134,31 @@ export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin/fontforge"
 
 source <(fzf --zsh)
 
+# ------------------------------
+# Alias for process
+# ------------------------------
+alias psax="ps axf -o user -o pid -o stat -o %cpu -o %mem -o comm"
+alias psx="ps xf -o user -o pid -o stat -o %cpu -o %mem -o comm"
+# ------------------------------
 # Alias for lsd 
+# ------------------------------
 alias lsl="ls -alh"
 alias ls="lsd"
+# ------------------------------
 # Alias for nvim
+# ------------------------------
 alias vi="nvim"
 alias vim="nvim"
+# ------------------------------
 # Alias for fuzzy finder
+# ------------------------------
 alias fzfvi='nvim $(fzf --multi --preview="bat --color=always {}")'
+# ------------------------------
 # Alias for tmux
+# ------------------------------
 alias tmuxa="tmux attach -t"
 alias tmux-term='tmux split-window -v -l "20%"' 
+# ------------------------------
 # Color issue of neovim in tmux
+# ------------------------------
 export TERM="xterm-256color"
