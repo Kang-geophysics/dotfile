@@ -30,7 +30,7 @@ config.default_cursor_style = "BlinkingBar"
 
 -- key bindings
 -- config.disable_default_key_bindings = true
-config.leader = { key = "z", mods = "ALT", timeout_milliseconds = 3000 }
+config.leader = { key = "x", mods = "ALT", timeout_milliseconds = 3000 }
 config.keys = {
 	-- New Tab
 	{
@@ -73,31 +73,52 @@ config.keys = {
 		mods = "LEADER",
 		action = act.CloseCurrentPane({ confirm = true }),
 	},
-	-- Navigate pane
+	-- Adjust pane size
 	{
+		key = "J",
 		mods = "LEADER",
+		action = act.AdjustPaneSize({ "Down", 5 }),
+	},
+	{
+		key = "K",
+		mods = "LEADER",
+		action = act.AdjustPaneSize({ "Up", 5 }),
+	},
+	{
+		key = "H",
+		mods = "LEADER",
+		action = act.AdjustPaneSize({ "Left", 5 }),
+	},
+	{
+		key = "L",
+		mods = "LEADER",
+		action = act.AdjustPaneSize({ "Right", 5 }),
+	},
+	-- Navigate to other pane
+	{
 		key = "j",
+		mods = "LEADER",
 		action = act.ActivatePaneDirection("Down"),
 	},
 	{
-		mods = "LEADER",
 		key = "k",
+		mods = "LEADER",
 		action = act.ActivatePaneDirection("Up"),
 	},
 	{
-		mods = "LEADER",
 		key = "h",
+		mods = "LEADER",
 		action = act.ActivatePaneDirection("Left"),
 	},
 	{
-		mods = "LEADER",
 		key = "l",
+		mods = "LEADER",
 		action = act.ActivatePaneDirection("Right"),
 	},
 	-- Paste
 	{
-		mods = "CTRL",
 		key = "v",
+		mods = "CTRL",
 		action = act.PasteFrom("Clipboard"),
 	},
 }
