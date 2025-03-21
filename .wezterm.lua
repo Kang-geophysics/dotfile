@@ -13,10 +13,11 @@ config.color_scheme = "Gruvbox Dark (Gogh)"
 
 -- Font settings
 config.font = wezterm.font("FiraCode Nerd Font Mono")
-config.font_size = 15
+config.font_size = 17
 
 -- Appearance
-config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.9
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
 	top = 3,
@@ -30,7 +31,7 @@ config.default_cursor_style = "BlinkingBar"
 
 -- key bindings
 -- config.disable_default_key_bindings = true
-config.leader = { key = "x", mods = "ALT", timeout_milliseconds = 3000 }
+config.leader = { key = "x", mods = "ALT", timeout_milliseconds = 2000 }
 config.keys = {
 	-- New Tab
 	{
@@ -52,13 +53,13 @@ config.keys = {
 	},
 	-- Split Pane
 	{
-		key = "-",
-		mods = "LEADER",
+		key = '"',
+		mods = "LEADER|SHIFT",
 		action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
 	{
-		key = "=",
-		mods = "LEADER",
+		key = "%",
+		mods = "LEADER|SHIFT",
 		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	-- Zoom pane
@@ -114,6 +115,17 @@ config.keys = {
 		key = "l",
 		mods = "LEADER",
 		action = act.ActivatePaneDirection("Right"),
+	},
+	-- Swap the active pane with other panes
+	{
+		key = "{",
+		mods = "LEADER|SHIFT",
+		action = act.RotatePanes("CounterClockwise"),
+	},
+	{
+		key = "}",
+		mods = "LEADER|SHIFT",
+		action = act.RotatePanes("Clockwise"),
 	},
 	-- Paste
 	{
