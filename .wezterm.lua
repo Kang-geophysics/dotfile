@@ -39,6 +39,12 @@ config.keys = {
 		mods = "LEADER",
 		action = act.SpawnCommandInNewTab,
 	},
+	-- New Tab
+	{
+		key = "w",
+		mods = "LEADER",
+		action = act.CloseCurrentTab({ confirm = true }),
+	},
 	-- Navigate to previous Tab
 	{
 		key = "p",
