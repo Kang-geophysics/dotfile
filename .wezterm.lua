@@ -104,22 +104,22 @@ config.keys = {
 	-- Navigate to other pane
 	{
 		key = "j",
-		mods = "CTRL",
+		mods = "LEADER",
 		action = act.ActivatePaneDirection("Down"),
 	},
 	{
 		key = "k",
-		mods = "CTRL",
+		mods = "LEADER",
 		action = act.ActivatePaneDirection("Up"),
 	},
 	{
 		key = "h",
-		mods = "CTRL",
+		mods = "LEADER",
 		action = act.ActivatePaneDirection("Left"),
 	},
 	{
 		key = "l",
-		mods = "CTRL",
+		mods = "LEADER",
 		action = act.ActivatePaneDirection("Right"),
 	},
 	-- Swap the active pane with other panes
