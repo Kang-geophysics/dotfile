@@ -39,9 +39,9 @@ config.keys = {
 		mods = "LEADER",
 		action = act.SpawnCommandInNewTab,
 	},
-	-- New Tab
+	-- Close Tab
 	{
-		key = "w",
+		key = "X",
 		mods = "LEADER",
 		action = act.CloseCurrentTab({ confirm = true }),
 	},
