@@ -1,6 +1,6 @@
 -- These are the basic's for using wezterm.
 -- Mux is the mutliplexes for windows etc inside of the terminal
--- Action is to perform actions on the terminal
+-- Action is to perform actions on the terminal for key-binding
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 local act = wezterm.action
@@ -26,11 +26,10 @@ config.window_padding = {
 	right = 1,
 }
 
--- makes my cursor blink
+-- Makes my cursor blink
 config.default_cursor_style = "BlinkingBar"
 
--- key bindings
--- config.disable_default_key_bindings = true
+-- Key bindings
 config.leader = { key = "x", mods = "ALT", timeout_milliseconds = 2000 }
 config.keys = {
 	-- New Tab
@@ -141,7 +140,10 @@ config.keys = {
 	},
 }
 
--- IMPORTANT: Sets WSL2 UBUNTU-22.04 as the defualt when opening Wezterm
+-- Adjust window size when you change font size.
+config.adjust_window_size_when_changing_font_size = false
+
+-- Default terminal: Sets WSL2 UBUNTU-22.04 as the defualt when opening Wezterm
 config.default_domain = "WSL:Ubuntu-22.04"
 
 return config
