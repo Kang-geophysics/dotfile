@@ -81,23 +81,23 @@ config.keys = {
 	},
 	-- Adjust pane size
 	{
-		key = "J",
-		mods = "LEADER",
+		key = "j",
+		mods = "LEADER|CTRL",
 		action = act.AdjustPaneSize({ "Down", 5 }),
 	},
 	{
-		key = "K",
-		mods = "LEADER",
+		key = "k",
+		mods = "LEADER|CTRL",
 		action = act.AdjustPaneSize({ "Up", 5 }),
 	},
 	{
-		key = "H",
-		mods = "LEADER",
+		key = "h",
+		mods = "LEADER|CTRL",
 		action = act.AdjustPaneSize({ "Left", 5 }),
 	},
 	{
-		key = "L",
-		mods = "LEADER",
+		key = "l",
+		mods = "LEADER|CTRL",
 		action = act.AdjustPaneSize({ "Right", 5 }),
 	},
 	-- Navigate to other pane
